@@ -59,7 +59,7 @@ export const NAV_LINKS = {
     { label: 'Download', href: '#download' },
   ],
   privacy: [
-    { label: 'Back to Cake', href: '/apps/cake' },
+    { label: 'Back to Cake', href: 'https://cake.bysnapps.com' },
   ],
 } as const;
 

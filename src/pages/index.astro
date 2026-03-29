@@ -9,7 +9,7 @@ const featuredApps = [
     description: APPS.cake.description,
     features: APPS.cake.features,
     icon: '/assets/cakeIcon.png',
-    href: '/apps/cake',
+    href: 'https://cake.bysnapps.com',
     state: 'Live',
     cta: 'View Product',
   },
@@ -79,7 +79,7 @@ const craftSignals = [
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="nav-cta" href="/apps/cake">Open Cake</a>
+    <a class="nav-cta" href="https://cake.bysnapps.com" target="_blank" rel="noopener noreferrer">Open Cake</a>
   </header>
 
   <!-- Act I: The Opening -->
@@ -163,7 +163,7 @@ const craftSignals = [
                 {app.features.map((feature) => <li>{feature}</li>)}
               </ul>
 
-              <a class={`app-link ${app.state === 'Soon' ? 'is-soon' : ''}`} href={app.href}>
+              <a class={`app-link ${app.state === 'Soon' ? 'is-soon' : ''}`} href={app.href} target={app.href.startsWith('http') ? '_blank' : undefined} rel={app.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                 {app.cta}
               </a>
             </article>
